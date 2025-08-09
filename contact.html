@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - IdeaForge</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body class="contact-body">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">IdeaForge</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="dropdown">
+          <a href="#">Schedule</a>
+          <ul class="dropdown-menu">
+            <li><a href="schedule-online.html">Online Meeting</a></li>
+            <li><a href="schedule-demo.html">Demo</a></li>
+            <li><a href="schedule-one.html">One on One</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="contact-section text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Fill out the form below or reach us through our email or phone.</p>
+
+      <form action="/" class="form-signin" method="POST">
+        <img class="mb-4" src="image/logo.png" alt="IdeaForge Logo" width="72" height="72" />
+        <h1 class="h3 mb-3 font-weight-normal">Signup to our Newsletter</h1>
+
+        <input type="text" name="fName" class="form-control mb-2" placeholder="First Name" required autofocus />
+        <input type="text" name="lName" class="form-control mb-2" placeholder="Last Name" required />
+        <input type="email" name="email" class="form-control mb-2" placeholder="Email" required />
+
+        <div class="checkbox mb-3">
+          <label><input type="checkbox" value="remember-me" /> Remember me</label>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="company-name">&copy; 2025 IdeaForge</div>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+      </div>
+      <div class="newsletter">
+        <p>Subscribe to our newsletter</p>
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
