@@ -26,3 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('show');
   });
 });
+
+const newsletterForm = document.querySelector('.newsletter-form');
+
+newsletterForm.addEventListener('submit', async (e) => {
+  e.preventDefault(); // prevent page reload
+
+  const email = newsletterForm.email.value;
+
+  // Example first & last name placeholders
+  const fName = "Subscriber";
+  const lName = "";
+
+  try {
+    const response = await fetch('http://localhost:5000/api/newsletter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fName, lName, email })
+    });
+
+    const data = await response.json();
+    alert(data.message); // success/failure message
+    newsletterForm.reset(); // clear the input
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+    console.error(error);
+  }
+});
+

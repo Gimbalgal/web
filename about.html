@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - IdeaForge</title>
   <link rel="stylesheet" href="styles.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 <body>
   <header class="animate-on-scroll">
     <nav class="navbar">
-      <div class="logo">IdeaForge</div>
+      <a href="index.html" class="logo">IdeaForge</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -32,24 +33,50 @@
     </nav>
   </header>
 
-  <section class="section animate-on-scroll">
-    <h2>About IdeaForge</h2>
-    <p>IdeaForge is a startup dedicated to empowering small businesses by giving them a strong and affordable online presence. We believe that technology should be accessible to everyone, regardless of business size or budget.</p>
-  </section>
+<section class="about-section">
+  <div class="about-container">
+    <h1 class="about-title">About Us</h1>
+    <p class="about-intro">
+      At <span class="highlight">ideaForge</span>, we believe every business—no matter how small—deserves to shine online. 
+      We are a passionate startup dedicated to helping small and growing businesses establish a strong digital presence.
+    </p>
 
-  <section class="section animate-on-scroll">
-    <h2>Our Vision</h2>
-    <p>To become the leading platform helping small businesses gain visibility through innovative and affordable web solutions.</p>
-  </section>
+    <div class="about-cards">
+      <div class="card">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is simple: to give every business the tools, strategies, and visibility 
+          they need to thrive in today’s digital world.
+        </p>
+      </div>
+      <div class="card">
+        <h2>What We Do</h2>
+        <p>
+          From building beautiful websites to designing tailored online strategies, 
+          we focus on showcasing your business to the right audience.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Why Choose Us?</h2>
+        <ul>
+          <li>We put <strong>your growth first</strong></li>
+          <li>We make technology <strong>simple & accessible</strong></li>
+          <li>We blend <strong>creativity and strategy</strong></li>
+          <li>We are passionate about <strong>small business success</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Our Vision</h2>
+        <p>
+          We envision a future where no business is hidden in the shadows. 
+          With <span class="highlight">ideaForge</span>, every business—big or small—can claim its space online, 
+          connect with customers, and grow with confidence.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section class="section animate-on-scroll">
-    <h2>Our Mission</h2>
-    <ul>
-      <li>Build user-friendly and responsive websites</li>
-      <li>Provide personalized customer service</li>
-      <li>Offer flexible and budget-friendly packages</li>
-    </ul>
-  </section>
 
   <footer class="animate-on-scroll">
     <div class="footer-content">
@@ -59,14 +86,16 @@
         <a href="#" target="_blank">Twitter</a>
         <a href="#" target="_blank">LinkedIn</a>
       </div>
-      <div class="newsletter">
-        <p>Subscribe to our newsletter</p>
-        <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-      </div>
+    <div class="newsletter">
+       <p>Subscribe to our newsletter</p>
+      <form class="newsletter-form">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+       </form>
+    </div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
 </body>
 </html>

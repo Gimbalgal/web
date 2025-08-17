@@ -53,12 +53,24 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-image-wrapper">
-      <div class="overlay"></div>
-      <img src="image/Flyer.png" alt="Hero Image" />
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Empowering Small Businesses Online</h1>
+      <p>
+        At <span class="highlight">ideaForge</span>, we help small businesses 
+        build a powerful online presence so they can reach more customers, 
+        grow with confidence, and shine in the digital world.
+      </p>
+      <a href="about.html" class="hero-btn">Learn More</a>
     </div>
-  </section>
+    <div class="hero-image">
+      <img src="image/Flyer.png" alt="Startup teamwork">
+    </div>
+  </div>
+</section>
+
+
 
   <!-- Section 1: Benefits of Our Services -->
   <section class="section benefits">
@@ -142,11 +154,13 @@
         <a href="#" target="_blank">Twitter</a>
         <a href="#" target="_blank">LinkedIn</a>
       </div>
-      <div class="newsletter">
-        <p>Subscribe to our newsletter</p>
-        <input type="email" placeholder="Enter your email" />
-        <button>Subscribe</button>
-      </div>
+    <div class="newsletter">
+       <p>Subscribe to our newsletter</p>
+       <form class="newsletter-form">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+       </form>
+    </div>
     </div>
   </footer>
 
