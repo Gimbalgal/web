@@ -41,8 +41,8 @@
 
 <section class="form-section animate-on-scroll">
   <div class="form-container">
-    <form class="contact-form">
-      <h3>Book Your Online Meeting</h3>
+    <form class="contact-form" id="onlineMeetingForm">
+      <h3>Book Online Meeting</h3>
 
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -55,8 +55,11 @@
 
       <label for="time">Preferred Time:</label>
       <input type="time" id="time" name="time" required>
+      <label for="notes">Notes:</label>
+      <textarea id="notes" name="notes" placeholder="Any extra details"></textarea>
 
-      <button type="submit">Book Meeting</button>
+      <button type="submit">Book Online Meeting</button>
+      <p id="onlineMeetingMessage" style="margin-top:10px; font-weight:bold;"></p>
     </form>
   </div>
 </section>
@@ -70,13 +73,17 @@
         <a href="#" target="_blank">Twitter</a>
         <a href="#" target="_blank">LinkedIn</a>
       </div>
-    <div class="newsletter">
-       <p>Subscribe to our newsletter</p>
-       <form class="newsletter-form">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-        </form>
-    </div>
+<div class="newsletter">
+    <p>Subscribe to our newsletter</p>
+    <form class="newsletter-form">
+    <input type="email" name="email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+    
+    <p id="form-message" class="form-message"></p>
+  </form>
+</div>
+
+
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
