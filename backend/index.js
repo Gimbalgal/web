@@ -1,12 +1,10 @@
-
-
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-
+const path = require('path'); 
 
 const Newsletter = require('./model/Newsletter');
 const Schedule = require('./model/Schedule');
@@ -20,8 +18,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('frontend'));
 
+// Serve static frontend files (absolute path)
+app.use(express.static(path.join(__dirname, '../frontend')));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -160,7 +159,10 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
-
+// Fallback: serve index.html for any other route (SPA support)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
